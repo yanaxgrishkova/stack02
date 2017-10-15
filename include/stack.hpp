@@ -109,7 +109,6 @@ void stack<T>::print_array()
 		{
 			std::cout << array_[i] << "\t";
 		}
-	std::cout << std::endl;
 }
 
 template <typename T>
@@ -122,7 +121,7 @@ void stack<T>::print_last()
 		
 	else
 	{
-		std::cout << array_[--count_] << std::endl;
+		std::cout << array_[--count_];
 	}
 }
 
