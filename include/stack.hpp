@@ -103,11 +103,11 @@ template <typename T>
 void stack<T>::print_array()
 {
 	if (count_ == 0)
-		throw std::logic_error("Stack is empty! Try again!\n");
+		throw logic_error("Stack is empty! Try again!\n");
 	else
 		for (unsigned int i = 0; i < count_; i++)
 		{
-			std::cout << array_[i] << "\t";
+			cout << array_[i] << "\t";
 		}
 }
 
@@ -116,12 +116,12 @@ void stack<T>::print_last()
 {
 	if (count_ == 0)
 	{
-		throw std::logic_error("Stack is empty! Try again!\n");
+		throw logic_error("Stack is empty! Try again!\n");
 	}
 		
 	else
 	{
-		std::cout << array_[--count_];
+		cout << array_[--count_];
 	}
 }
 
@@ -130,7 +130,7 @@ template <typename T>
 void stack<T>::swap()
 {
 	T* temp = new T[array_size_];
-	std::copy(array_, array_ + count_, temp);
+	copy(array_, array_ + count_, temp);
 
 	delete[] array_;
 
