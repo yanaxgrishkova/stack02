@@ -1,6 +1,5 @@
 #include <stdexcept>
 #include <algorithm>
-#include <utility>
 
 using namespace std;
 
@@ -130,7 +129,7 @@ template <typename T>
 void stack<T>::swap()
 {
 	T* temp = new T[array_size_];
-	std::copy(array_, array_ + count_, stdext::checked_array_iterator<T*>(temp, count_));
+	std::copy(array_, array_ + count_, temp);
 
 	delete[] array_;
 
