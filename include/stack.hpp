@@ -2,8 +2,6 @@
 #include <stdexcept>
 #include <algorithm>
 
-using namespace std;
-
 template <typename T>
 class stack
 {
@@ -103,11 +101,11 @@ template <typename T>
 void stack<T>::print_array()
 {
 	if (count_ == 0)
-		throw logic_error("Stack is empty! Try again!\n");
+		std::cout << "Stack is empty! Try again!\n";
 	else
 		for (unsigned int i = 0; i < count_; i++)
 		{
-			cout << array_[i] << "\t";
+			std::cout << array_[i] << "\t";
 		}
 }
 
@@ -116,12 +114,12 @@ void stack<T>::print_last()
 {
 	if (count_ == 0)
 	{
-		throw logic_error("Stack is empty! Try again!\n");
+		std::cout << "Stack is empty! Try again!\n";
 	}
 		
 	else
 	{
-		cout << array_[--count_];
+		std::cout << array_[--count_];
 	}
 }
 
@@ -130,7 +128,7 @@ template <typename T>
 void stack<T>::swap()
 {
 	T* temp = new T[array_size_];
-	copy(array_, array_ + count_, temp);
+	std::copy(array_, array_ + count_, temp);
 
 	delete[] array_;
 
