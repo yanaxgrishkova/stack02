@@ -96,7 +96,7 @@ T stack<T>::pop()
 }
 
 template <typename T>
-void stack<T>::print_array()
+void stack<T>::print()
 {
 	if (count_ == 0)
 		std::cout << "Stack is empty! Try again!\n";
@@ -108,23 +108,7 @@ void stack<T>::print_array()
 }
 
 template <typename T>
-void stack<T>::print_last()
-{
-	if (count_ == 0)
-	{
-		std::cout << "Stack is empty! Try again!\n";
-	}
-		
-	else
-	{
-		std::cout << array_[--count_];
-	}
-}
-
-
-
-template <typename T>
-void stack<T>::swap(Stack& other)
+void stack<T>::swap(Stack<T>& other)
 {
 	std::swap((*this).array_, other.array_);
     	std::swap((*this).array_size_, other.array_size_);
