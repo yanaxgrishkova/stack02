@@ -12,7 +12,7 @@ public:
 	stack(stack<T> const &copy);
 	stack<T>& operator = (stack<T> const &other);
 	size_t count() const;
-	size_t array_size_() const;
+	size_t array_size() const;
 	void swap(stack<T>& other);
 	void push(T const &);
 	T pop();
