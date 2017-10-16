@@ -11,6 +11,7 @@ public:
 	~stack();
 	stack(stack<T> const &copy);
 	stack<T>& operator = (stack<T> const &other);
+	size_t operator[] (unsigned int index);
 	size_t count() const;
 	size_t array_size() const;
 	void swap(stack<T>& other);
@@ -49,6 +50,12 @@ stack<T>& stack<T>::operator=(stack<T> const &other)
 		swap(temp);
 	}
 	return *this;
+}
+
+template <typename T>
+size_t stack<T>::operator[] (unsigned int index)
+{
+	return array_[index];
 }
 
 
