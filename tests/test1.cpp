@@ -24,7 +24,7 @@ TEST_CASE("pop", "") {
 }
 
 TEST_CASE("op = ", "") {
-    stack<int> s1(1);
+    stack<int> s1(0);
     stack<int> s2 = s1;
 	REQUIRE(s2.count() == s1.count());
 	REQUIRE(s2.array_size() == s1.array_size());
