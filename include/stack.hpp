@@ -16,7 +16,7 @@ public:
 	T pop();
 	void print_array();
 	void print_last();
-	void swap();
+	void swap(stack<T>& const other)
 private:
 	T* array_;
 	size_t array_size_;
@@ -108,7 +108,7 @@ void stack<T>::print()
 }
 
 template <typename T>
-void stack<T>::swap(Stack<T>& other)
+void stack<T>::swap(stack<T>& const other)
 {
 	std::swap((*this).array_, other.array_);
     	std::swap((*this).array_size_, other.array_size_);
