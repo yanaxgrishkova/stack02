@@ -17,7 +17,7 @@ public:
 	void swap(stack<T>& other);
 	void push(T const &);
 	T pop();
-	std::ostream& print(std::ostream& os, stack<T>* obj);
+	std::ostream& print(std::ostream& os);
 			
 	friend std::ostream& operator<< (std::ostream& os, stack<T>& obj);
 	
@@ -114,7 +114,7 @@ T stack<T>::pop()
 }
 
 template <typename T>
-std::ostream& stack<T>::print(std::ostream& os, stack<T>* obj)
+std::ostream& stack<T>::print(std::ostream& os)
 {
 	if (count_ == 0)
 		os << "Stack is empty! Try again!\n";
@@ -136,7 +136,7 @@ std::ostream& operator<< (std::ostream& os, stack<T>& obj)
 template <typename T>
 void stack<T>::swap(stack<T>& other)
 {
-	std::swap((*this).array_, other.array_);
-    	std::swap((*this).array_size_, other.array_size_);
-	std::swap((*this).count_, other.count_);
+	std::swap(array_, other.array_);
+    	std::swap(array_size_, other.array_size_);
+	std::swap(count_, other.count_);
 }
