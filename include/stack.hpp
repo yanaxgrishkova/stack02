@@ -12,6 +12,7 @@ public:
 	stack(stack<T> const &copy);
 	stack<T>& operator = (stack<T> const &other);
 	size_t count() const;
+	size_t array_size_() const;
 	void swap(stack<T>& other);
 	void push(T const &);
 	T pop();
@@ -61,6 +62,12 @@ template <typename T>
 size_t stack<T>::count() const
 {
 	return count_;
+}
+
+template <typename T>
+size_t stack<T>::array_size() const
+{
+	return array_size_;
 }
 
 template <typename T>
