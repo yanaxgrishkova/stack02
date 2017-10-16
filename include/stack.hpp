@@ -9,7 +9,7 @@ class stack
 public:
 	stack();
 	~stack();
-	stack(size_t s1);
+	stack(size_t size);
 	stack(stack<T> const &copy);
 	stack<T>& operator = (stack<T> const &other);
 	size_t count() const;
@@ -32,11 +32,11 @@ stack<T>::stack() : count_(0), array_size_(0), array_(nullptr)
 {}
 
 template <typename T>
-stack<T>::stack(size_t s1)
+stack<T>::stack(size_t size)
 {
-        count_ = s1;
-        array_size_ = s1;
-        array_ = new T[s1]();
+        count_ = size;
+        array_size_ = size;;
+        array_ = new T[size]();
 }
 	
 
